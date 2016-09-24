@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Star Wars Intro</title>
-    <link rel="stylesheet" href="/path/to/starwarsintro.css">
+    <link rel="stylesheet" href="starwarsintro.css">
+
+    <script>
+        setTimeout(function(){
+            document.getElementById("crawl-audio").play();
+        }, 2150);
+    </script>
 </head>
-<body>
+<body onload="setTimeout()">
+    <audio id="crawl-audio">
+        <source src="crawl_theme.mp3" type="audio/mpeg" />
+    </audio>
+
     <div class="star-wars-intro">
         <p class="intro-text">
             A long time ago, in a galaxy far, far away...
