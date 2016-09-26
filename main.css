@@ -76,7 +76,11 @@ nav ._active {
     padding-left: 16px;
 }
 
-
+/* Main-Content */
+.main-content {
+position: absolute;
+top: 500px;
+}
 
 /* Small Screen Formatting */
 @media screen and (max-width: 760px) {
@@ -100,3 +104,4 @@ nav ._active {
         float: none;
     }
 }
+
