@@ -1,0 +1,102 @@
+/* This is a reset CSS section. It resets the presets of the
+different elements available in CSS. I am using it here to
+make sure that there are no funky "defaults" in different
+browsers that may mess with my CSS formatting. I hope it works! */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*--------- THE REST IS MY CUSTOM CSS ----------*/
+
+body {
+    position: relative;
+}
+
+/* ---- Header Formatting ----- */
+/* Header should adjust with screen size */
+header {
+    background-color: #1e88e5;
+    box-sizing: border-box;
+    height: 256px;
+    padding: 0px 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+    position: fixed;
+    width: 100%;
+}
+
+.header-title-small {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    padding: 12.5px 16px;
+}
+
+nav {
+    position: relative;
+    float:right;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-item a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-item a {
+    border-bottom:2px solid transparent;
+}
+
+nav ._active {
+    border-bottom-color:rgba(255,255,255,1);
+}
+
+.nav-item a:focus, .nav-item a:hover {
+    border-bottom-color:rgba(255,255,255,.35);
+}
+
+.header-title-large {
+    clear: right;
+    color: white;
+    font-size: 40px;
+    padding-top: 100px;
+    padding-left: 16px;
+}
+
+
+
+/* Small Screen Formatting */
+@media screen and (max-width: 760px) {
+    header {
+        height: 98px;
+    }
+
+    .header-title-small {
+        color: white;
+        font-size: 20px;
+        display: block;
+        padding: 12.5px 16px;
+    }
+
+    .header-title-large {
+        display: none;
+    }
+
+    nav {
+        display: inline-block;
+        float: none;
+    }
+}
