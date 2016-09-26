@@ -16,6 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i|Open+Sans:100,300,300i,400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
+
+    <!-- Including MDL Library -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
 </head>
 <body>
 <!--Bootstap Header-->
@@ -49,6 +53,7 @@
 
     <nav>
         <ul>
+            <li class="nav-item"><a href="">HOME</a></li>
             <li class="nav-item"><a href="">DUEL</a></li>
             <li class="nav-item"><a href="">JEDI & SITH</a></li>
             <li class="nav-item"><a href="">PLANETS</a></li>
@@ -63,44 +68,48 @@
 </header>
 
 <div class="main-content">
-    
-</div>
-<!--DUEL-->
+    <div class="link-section mdl-grid">
 
-	<div class="option" id="duel" style="opacity: 1; left: 0px; bottom: 0px; position: relative; transform-origin: left center 0px; height: 2px; width: 70.58px; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(255, 255, 255);">
-		<img src="Duel.jpg" style="position: absolute; left:0px; top:0
-px;">
-		<div style="position: absolute; left: 10px; top: 10 px; color:white;">
-		<h1> DUEL</h1>
-		<br />
-<p>Fight your favorite Jedies and Sith to see who will rule the galxy.</p> 
-	</div>
-	</div>
-
-<!--Jedi & Sith-->
-        <div class="option" id="duel" style="opacity: 1; left: 300px; bottom: 0px; position: absolute; transform-origin: left center 0px; height: 2px; width: 70.58px; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(255, 255, 255);">
-                
-		<img src="vader2.jpg" style="position: absolute; left:0px; top:0px;">
-		<div style="position: absolute; left: 10px; top: 10 px; color:white;">
-			<h1> JEDI & SITH</h1>
-                	<br />
-			<p>Learn about your favorite Jedis Masters and Sith Lords.</p>
-        	</div>
-	</div
-<!--Battle Grounds-->
-        <div class="option" id="duel" style="opacity: 1; left: 600px; bottom: 0px; position: absolute; transform-origin: left center 0px; height: 2px; width: 70.58px; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(255, 255, 255);">
-                <img src="Planet.jpg" style="position: absolute; left:0px; top:0
-px; width: 250px; height: 300px">
-
-		<div style="position: absolute; left: 10px; top: 10 px; color:white;">
-		<h1> BATTLE GROUNDS</h1>
-                <br />
-            <p>Learn about the planets where the famous glaxtic battles take place.</p>
+        <!--DUEL-->
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand" id="duel-card__title">
+                    <h2 class="mdl-card__title-text">DUEL</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Fight your favorite Jedi and Sith to see who will rule the galaxy
+                </div>
+            </div>
         </div>
-	</div>
+
+        <!--Jedi & Sith-->
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand" id="jedi-sith-card__title">
+                    <h2 class="mdl-card__title-text">JEDI & SITH</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Learn about your favorite Jedi Masters and Sith Lords
+                </div>
+            </div>
+        </div>
+
+        <!--Battle Grounds-->
+        <div class="mdl-cell mdl-cell--4-col">
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand" id="battleground-card__title">
+                    <h2 class="mdl-card__title-text">BATTLEGROUNDS</h2>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    Learn about the planets where the famous galactic battles take place
+                </div>
+            </div>
+	    </div>
+    </div>
 </div>
+
 <footer>
-    <p>Alex Fowler  Spencer Simpson</p>
+    <p>Alex Fowler & Spencer Simpson</p>
 </footer>
 
 

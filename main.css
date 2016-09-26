@@ -76,12 +76,6 @@ nav ._active {
     padding-left: 16px;
 }
 
-/* Main-Content */
-.main-content {
-position: absolute;
-top: 500px;
-}
-
 /* Small Screen Formatting */
 @media screen and (max-width: 760px) {
     header {
@@ -105,3 +99,38 @@ top: 500px;
     }
 }
 
+/*main content formatting*/
+.main-content {
+    color: rgba(0,0,0,87%);
+    padding-top: 256px;
+    padding-bottom: 50px;
+}
+
+
+/*card formatting*/
+.mdl-card {
+    width: 100%;
+}
+
+#duel-card__title {
+    background-image: url("Duel.jpg");
+    background-size: 100% auto;
+    background-position: center;
+}
+
+#jedi-sith-card__title {
+    background-image: url("vader2.jpg");
+    background-size: 100% auto;
+    background-position: top;
+}
+
+#battleground-card__title {
+    background-image: url("Planet.jpg");
+    background-size: 100% auto;
+    background-position: center;
+}
+
+
+h2.mdl-card__title-text {
+    color: white;
+}
