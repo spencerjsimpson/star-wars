@@ -24,6 +24,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 
 .header-title-small {
@@ -133,4 +134,31 @@ nav ._active {
 
 h2.mdl-card__title-text {
     color: white;
+}
+
+.mdl-card {
+    width: 330px;
+    height: 330px;
+}
+
+.mdl-cell--6-col .mdl-card {
+    width: 100%;
+}
+
+.supporting-text {
+    display: inline-block;
+}
+
+.jedi-image {
+    border-radius: 100%;
+    height: 80px;
+    width: 80px;
+    padding: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.0980392);
+}
+
+.jedi-image--inner {
+    width: 100%;
+    border-radius: 100%;
+    margin: auto;
 }
