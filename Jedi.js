@@ -4,14 +4,14 @@ $("#vader").click(function(e){
 
 swurl= "http://swapi.co//api/people/4";
 getPerson(swurl);
-$("#profile").attr("src","vader2.jpg");
+$("#profile").attr("src","img/vader2.jpg");
 });
 
 $("#luke").click(function(e){
   e.preventDefault();
 swurl= "http://swapi.co//api/people/1";
 getPerson(swurl);
-$("#profile").attr("src","Luke_profile.jpeg");
+$("#profile").attr("src","img/Luke_profile.jpeg");
 });
 
 $("#obi").click(function(e){
@@ -19,7 +19,7 @@ $("#obi").click(function(e){
 swurl= "http://swapi.co//api/people/10";
 getPerson(swurl);
 
-$("#profile").attr("src","Ben_Kenobi.png");
+$("#profile").attr("src","img/Ben_Kenobi.png");
 $('#profile').width(220); // Units are assumed to be pixels
 $('#profile').height(330);
 });
@@ -51,7 +51,7 @@ success : function(parsed_json) {
     }
   });
 }
-$("#profile").attr("src","vader2.jpg");
+$("#profile").attr("src","img/vader2.jpg");
 getPerson("http://swapi.co//api/people/4");
 });
 
