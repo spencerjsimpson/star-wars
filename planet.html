@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<!--Jquery-->
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="Planet.js"></script>
     <!-- Include internal stylesheets -->
     <link rel="stylesheet" href="main.css" type="text/css">
 
@@ -20,6 +19,12 @@
     <!-- Including MDL Library -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="Planet.js"></script>
+
+
+
+
+
 </head>
 <body>
 
@@ -31,9 +36,9 @@
 
     <nav>
         <ul>
-            <li class="nav-item"><a href="">HOME</a></li>
-            <li class="nav-item"><a href="">DUEL</a></li>
-            <li class="nav-item"><a href="">JEDI & SITH</a></li>
+            <li class="nav-item"><a href="home.html">HOME</a></li>
+            <li class="nav-item"><a href="duel.html">DUEL</a></li>
+            <li class="nav-item"><a href="jedi.html">JEDI & SITH</a></li>
             <li class="nav-item"><a href="">PLANETS</a></li>
         </ul>
         <div class="nav-underline" style="opacity: 1; left: 0px; bottom: 0px; position: absolute; transform-origin: left center 0px; height: 2px; width: 70.58px; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(255, 255, 255);">
@@ -50,32 +55,20 @@
 
         <!--Planets-->
         <div class="mdl-cell mdl-cell--6-col">
-    <h3>Chose a planet:</h3>
-    <div id="all">
-    <button id="tatooine" class="mdl-button mdl-js-button mdl-button--raised">
-  Tatooine
-</button>
+    <h3>Enter a Planet Id:</h3>
+<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="planetID">
+    <label class="mdl-textfield__label" for="planetID">Planet Id...</label>
+    <span class="mdl-textfield__error">Input is not a number!</span>
+  </div>
+</form>
+<input id="button" class="mdl-button mdl-js-button mdl-button--raised" value="Search" >
+	
+    <div><h4>Suggested Planets:<h4>
 <br />
-<br />
- <button id="alderaan" class="mdl-button mdl-js-button mdl-button--raised">
-  Alderaan
-</button>
-<br />
-<br />
- <button id="yavin"class="mdl-button mdl-js-button mdl-button--raised">
-  Yavin IV
-</button>
-<br />
-<br />
-<button id="hoth"class="mdl-button mdl-js-button mdl-button--raised">
-  Hoth
-</button>
-<br />
-<br />
-<button id="dagobah"class="mdl-button mdl-js-button mdl-button--raised">
-  Dagobah
-</button>
-    </div> 
+<span id="suggestion"></span>
+</div>
 </div>
         <!--stats-->
         <div class="mdl-cell mdl-cell--6-col">
