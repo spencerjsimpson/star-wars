@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars Planet Page</title>
+
+    <!-- including this is helpful for styling on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<!--Jquery-->
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="Planet.js"></script>
+    <!-- Include internal stylesheets -->
+    <link rel="stylesheet" href="main.css" type="text/css">
+
+    <!-- Including Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,400i,700,700i|Open+Sans:100,300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+    <!-- Including MDL Library -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+</head>
+<body>
+
+<!--My Custom Header-->
+<header>
+    <div class="header-title-small">
+        <span>Star Wars</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="">HOME</a></li>
+            <li class="nav-item"><a href="">DUEL</a></li>
+            <li class="nav-item"><a href="">JEDI & SITH</a></li>
+            <li class="nav-item"><a href="">PLANETS</a></li>
+        </ul>
+        <div class="nav-underline" style="opacity: 1; left: 0px; bottom: 0px; position: absolute; transform-origin: left center 0px; height: 2px; width: 70.58px; transform: matrix(1, 0, 0, 1, 0, 0); background-color: rgb(255, 255, 255);">
+        </div>
+    </nav>
+
+    <div class="header-title-large">
+        <span>Planets</span>
+    </div>
+</header>
+
+<div class="main-content">
+    <div class="link-section mdl-grid">
+
+        <!--Planets-->
+        <div class="mdl-cell mdl-cell--6-col">
+    <h3>Chose a planet:</h3>
+    <div id="all">
+    <button id="tatooine" class="mdl-button mdl-js-button mdl-button--raised">
+  Tatooine
+</button>
+<br />
+<br />
+ <button id="alderaan" class="mdl-button mdl-js-button mdl-button--raised">
+  Alderaan
+</button>
+<br />
+<br />
+ <button id="yavin"class="mdl-button mdl-js-button mdl-button--raised">
+  Yavin IV
+</button>
+<br />
+<br />
+<button id="hoth"class="mdl-button mdl-js-button mdl-button--raised">
+  Hoth
+</button>
+<br />
+<br />
+<button id="dagobah"class="mdl-button mdl-js-button mdl-button--raised">
+  Dagobah
+</button>
+    </div> 
+</div>
+        <!--stats-->
+        <div class="mdl-cell mdl-cell--6-col">
+
+   
+  
+ 
+
+                    <h1 id="name"> Stats:
+</h1>
+<div id="stats">
+
+</div>
+
+
+
+</div>
+
+<footer>
+    <p>Alex Fowler & Spencer Simpson</p>
+</footer>
+
+
+</body>
+</html>
