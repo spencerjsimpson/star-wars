@@ -1,4 +1,4 @@
-dy(function() {
+$(document).ready(function() {
 
 $("#tatooine").click(function(e){
   e.preventDefault();
@@ -6,7 +6,7 @@ swurl= "http://swapi.co//api/planets/1";
 getPlanet(swurl);
 });
 
-$("#alderann").click(function(e){
+$("#alderaan").click(function(e){
   e.preventDefault();
 swurl= "http://swapi.co//api/planets/2";
 getPlanet(swurl);
