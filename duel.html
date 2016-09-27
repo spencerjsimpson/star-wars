@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Star Wars - Duel</title>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
 
     <!-- including this is helpful for styling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="duel.js"></script>
 
     <!-- Include internal stylesheets -->
     <link rel="stylesheet" href="main.css" type="text/css">
@@ -20,12 +22,17 @@
     <!-- Including MDL Library -->
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+
+    <!--including dialog polyfill-->
+    <script src="bower_components/dialog-polyfill/dialog-polyfill.js"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/dialog-polyfill/dialog-polyfill.css" />
+
 </head>
 <body>
 <!--My Custom Header-->
 <header>
     <div class="header-title-small">
-        <span>STAR WARS</span>
+        <span>Duel</span>
     </div>
 
     <nav>
@@ -47,52 +54,85 @@
 <div class="main-content">
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--6-col">
-            <div class="mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title mdl-card--border">
-                    <h1 class="mdl-card__title-text">
-                        Player 1: Choose your Jedi/Sith
-                    </h1>
-                </div>
-                <div class="mdl-card__supporting-text">
-
-                    <div class="jedi-image">
-                        <img class="jedi-image--inner" src="pixel_luke.jpg">
-                    </div>
-                        <div class="jedi-name">
-                            Luke Skywalker
-                        </div>
-
-                    <div class="jedi-image">
-                        <img class="jedi-image--inner" src="pixel_obiwan.jpg">
-                    </div>
-                    <div class="">
-                        <div class="jedi-name">
-                            Obiwan Kenobi
-                        </div>
-                    </div>
-
-                    <div class="jedi-image">
-                        <img class="jedi-image--inner" src="pixel_vader.jpg">
-                    </div>
-                        <div class="jedi-name">
-                            Darth Vader
-                        </div>
-                </div>
+            <div class="sub-header__title">
+                <h1 class="mdl-card__title-text">
+                    Player 1: Choose your Jedi/Sith
+                </h1>
             </div>
+
+            <!--actions-->
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p1-luke-fight">
+                    <input checked class="mdl-radio__button" id="p1-luke-fight" name="player1-select" type="radio"
+                           value="luke">
+                    <span class="mdl-radio__label">Luke Skywalker</span>
+                </label>
+            </div>
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p1-obiwan-fight">
+                    <input class="mdl-radio__button" id="p1-obiwan-fight" name="player1-select" type="radio" value="obiwan">
+                    <span class="mdl-radio__label">Obiwan Kenobi</span>
+                </label>
+            </div>
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p1-vader-fight">
+                    <input class="mdl-radio__button" id="p1-vader-fight" name="player1-select" type="radio" value="vader">
+                    <span class="mdl-radio__label">Darth Vader</span>
+                </label>
+            </div>
+
         </div>
+
         <div class="mdl-cell mdl-cell--6-col">
-            <div class="mdl-card mdl-shadow--2dp">
-                <div class="mdl-card__title mdl-card--border">
-                    <h1 class="mdl-card__title-text">
-                        Player 2: Choose your Jedi/Sith
-                    </h1>
-                </div>
-                <div>
-                    Content (Jedis)
-                </div>
+            <div class="sub-header__title">
+                <h1 class="mdl-card__title-text">
+                    Player 2: Choose your Jedi/Sith
+                </h1>
+            </div>
+
+            <!--actions-->
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p2-luke-fight">
+                    <input checked class="mdl-radio__button" id="p2-luke-fight" name="player2-select" type="radio"
+                           value="luke">
+                    <span class="mdl-radio__label">Luke Skywalker</span>
+                </label>
+            </div>
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p2-obiwan-fight">
+                    <input class="mdl-radio__button" id="p2-obiwan-fight" name="player2-select" type="radio" value="obiwan">
+                    <span class="mdl-radio__label">Obiwan Kenobi</span>
+                </label>
+            </div>
+            <div class="radio-outer">
+                <label class="mdl-radio mdl-js-radio" for="p2-vader-fight">
+                    <input class="mdl-radio__button" id="p2-vader-fight" name="player2-select" type="radio" value="vader">
+                    <span class="mdl-radio__label">Darth Vader</span>
+                </label>
             </div>
         </div>
+        <div class="mdl-cell--4-col"></div>
+        <div class="mdl-cell--4-col">
+            <button id="fight-button" class="mdl-button mdl-js-button">
+                Fight
+            </button>
+        </div>
+        <div class="mdl-cell--4-col"></div>
     </div>
+
+    <dialog class="mdl-dialog">
+        <div class="mdl-dialog__title">
+            <h3 id="dialog-title" class="mdl-card__title-text">
+            </h3>
+        </div>
+        <div class="mdl-dialog__content">
+            <p id="battle-output">
+            </p>
+        </div>
+        <div class="mdl-dialog__actions mdl-dialog__actions--full-width">
+            <button id="close-button" type="button" class="mdl-button">Play Again</button>
+        </div>
+    </dialog>
 </div>
 
 <footer>
